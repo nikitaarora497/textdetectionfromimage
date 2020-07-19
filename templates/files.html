@@ -1,0 +1,19 @@
+<html>
+<head><title>Mypage</title>
+</head>
+<body>
+   <div class="container">
+      <h3>Bucket Info</h3>
+      <p>Created: {{ my_bucket.creation_date }}</p>
+      <hr>
+      {% for f in files %}
+      {{ f.key }}<br><br>
+      {{ f.last_modified }}<hr>
+      {% endfor %}
+    </div>
+<form action = "/go" method = "post" enctype="multipart form-data">
+   <input type = "text" name = "fname" placeholder="Image name"><br><br>         
+   <input type = "submit" value="Check for text">  
+</form>
+</body>
+</html>
